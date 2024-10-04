@@ -7,14 +7,14 @@ import { ModeToggle } from './ToggleMode'
 
 const Navbar = () => {
     return (
-        <div className=' sticky top-0 flex items-center justify-between md:px-20 px-5 py-4 border-b backdrop-blur'>
+        <div className=' sticky top-0 flex items-center z-10 justify-between md:px-20 px-5 py-4 border-b backdrop-blur'>
             <div className="logo text-xl font-semibold"> Salman Blogs</div>
             <div className='md:flex md:gap-4 md:items-center hidden'>
                 <div className='flex gap-4 mx-8'>
-                    <Link className='hover:font-semibold ease-in-out' href={"/"}>Home</Link>
-                    <Link className='hover:font-semibold ease-in-out' href={"/"}> About</Link>
-                    <Link className='hover:font-semibold ease-in-out' href={"/"}>Blogs</Link>
-                    <Link className='hover:font-semibold ease-in-out' href={"/"}>Contact Us</Link></div>
+                    <Link className='hover:font-semibold hover:scale-105 ease-in-out duration-300' href={"/"}>Home</Link>
+                    <Link className='hover:font-semibold hover:scale-105 ease-in-out duration-100' href={"/"}> About</Link>
+                    <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/"}>Blogs</Link>
+                    <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/"}>Contact Us</Link></div>
                     <ModeToggle/>
                 <Button>Login</Button>
                 <Button>Join Us</Button>
