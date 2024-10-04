@@ -3,10 +3,11 @@ import { Button } from './ui/button'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { SheetDemo } from './Mysheet'
+import { ModeToggle } from './ToggleMode'
 
 const Navbar = () => {
     return (
-        <div className='flex items-center justify-between md:px-20 px-5 py-4 border-b backdrop-blur'>
+        <div className=' sticky top-0 flex items-center justify-between md:px-20 px-5 py-4 border-b backdrop-blur'>
             <div className="logo text-xl font-semibold"> Salman Blogs</div>
             <div className='md:flex md:gap-4 md:items-center hidden'>
                 <div className='flex gap-4 mx-8'>
@@ -14,6 +15,7 @@ const Navbar = () => {
                     <Link className='hover:font-semibold ease-in-out' href={"/"}> About</Link>
                     <Link className='hover:font-semibold ease-in-out' href={"/"}>Blogs</Link>
                     <Link className='hover:font-semibold ease-in-out' href={"/"}>Contact Us</Link></div>
+                    <ModeToggle/>
                 <Button>Login</Button>
                 <Button>Join Us</Button>
             </div>
