@@ -219,7 +219,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section>
+    {/* <section>
     <div className="py-16">
         <div className="mx-auto px-6 max-w-6xl text-gray-500">
             <div className="text-center">
@@ -313,7 +313,7 @@ export default function Home() {
             </div>
         </div>
     </div>
-</section>
+</section> */}
     </main>
     
    </>

@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className='flex gap-4 mx-8'>
                     <Link className='hover:font-semibold hover:scale-105 ease-in-out duration-300' href={"/"}>Home</Link>
                     <Link className='hover:font-semibold hover:scale-105 ease-in-out duration-100' href={"/"}> About</Link>
-                    <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/"}>Blogs</Link>
+                    <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/blog"}>Blogs</Link>
                     <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/"}>Contact Us</Link></div>
                     <ModeToggle/>
                 <Button>Login</Button>
