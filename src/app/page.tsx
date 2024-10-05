@@ -10,6 +10,7 @@ import { useState } from "react";
 export default function Home() {
   const [isAnnual, setIsAnnual] = useState(true);
   return (
+    <>
     <main>
         <section className="container px-4 py-10 mx-auto lg:h-128 lg:space-x-8 lg:flex lg:items-center">
       <div className="w-full text-center lg:text-left lg:w-1/2 lg:-mt-8">
@@ -314,5 +315,7 @@ export default function Home() {
     </div>
 </section>
     </main>
+    
+   </>
   );
 }
