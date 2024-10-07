@@ -8,7 +8,7 @@ author: "Salman"
 date: "21/2/2023"
 ---
 
-# Introduction
+
 
 Python is a versatile and popular programming language known for its simplicity and readability. It is widely used in various fields, including web development, data analysis, artificial intelligence, scientific computing, and more. This guide will help you get started with Python, covering the basics and providing resources for further learning.
 
@@ -18,6 +18,8 @@ Python is a versatile and popular programming language known for its simplicity 
 - **Versatile**: Python can be used for web development, data science, automation, and more.
 - **Community Support**: Python has a large and active community, providing a wealth of resources and libraries.
 - **Career Opportunities**: Python is in high demand in the job market, especially in tech-related fields.
+
+
 
 ## Setting Up Python
 
@@ -52,6 +54,13 @@ for i in range(5):
   
 while x < 10:
     x += 1
+
+
+##Functions 
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Output: Hello, Alice!
 
 
 ##Functions 
