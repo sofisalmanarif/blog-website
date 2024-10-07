@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from './ui/button'
+import { Button, buttonVariants } from './ui/button'
+import Link from 'next/link'
 
 export type BlogType = {
     title?: string,
@@ -34,11 +35,9 @@ const Card: React.FC<{ blog: BlogType }> = ({blog}) => {
                 </p>
             </div>
             <div className="p-6 pt-0">
-                <Button
-                variant={'outline'}
-                    >
-                    Read More
-                </Button>
+               
+                <Link href={`/blog/${blog.slug}`} className={buttonVariants({ variant: "outline" })}>Click here</Link>
+
             </div>
         </div>
    
