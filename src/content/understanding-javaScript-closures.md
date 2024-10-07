@@ -1,3 +1,4 @@
+---
 title: 'Understanding JavaScript Closures'
 image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg'
 description: 'A comprehensive guide to understanding JavaScript closures.'

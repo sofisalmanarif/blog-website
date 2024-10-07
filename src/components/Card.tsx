@@ -2,11 +2,13 @@ import React from 'react'
 import { Button } from './ui/button'
 
 export type BlogType = {
-    title: string,
-      image:string,
-      description: string,
-      content: string,
-      slug: string
+    title?: string,
+      image?:string,
+      description?: string,
+      content?: string,
+      author?:string,
+      date?:string,
+      slug?: string
 }
 const Card: React.FC<{ blog: BlogType }> = ({blog}) => {
   return (
