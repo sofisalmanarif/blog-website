@@ -34,37 +34,39 @@ Here's a simple example of Python syntax:
 ```python
 # This is a comment
 print("Hello, World!")  # Output: Hello, World!
+```
 
-
-##Variables: Python is dynamically typed, so you don't need to declare variable types.
+#### Variables: Python is dynamically typed, so you don't need to declare variable types.
+```python
 x = 5
 y = "Hello"
+```
 
-##If Statements:
+### If Statements:
+```python
 if x > 0:
     print("Positive")
 elif x == 0:
     print("Zero")
 else:
     print("Negative")
+```
 
-##Loops
+### Loops :
+```python
 for i in range(5):
     print(i)
   
 while x < 10:
     x += 1
 
+```
 
-##Functions 
+### Functions :
+```python
 def greet(name):
     return f"Hello, {name}!"
 
 print(greet("Alice"))  # Output: Hello, Alice!
 
-
-##Functions 
-def greet(name):
-    return f"Hello, {name}!"
-
-print(greet("Alice"))  # Output: Hello, Alice!
+```
