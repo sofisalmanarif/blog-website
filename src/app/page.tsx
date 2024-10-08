@@ -48,7 +48,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="container mx-auto">
+    <section className="container mx-auto mb-20">
     <h2 className="text-4xl text-center font-extrabold mb-8 dark:text-white text-black  sm:text-5xl">
         Choose Your Plan
       </h2>
