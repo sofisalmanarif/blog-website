@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons'
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -5,12 +6,12 @@ import React from 'react'
 
 const Page = () => {
     return (
-        <div className="w-full h-[93vh] ">
+        <div className="w-full min-h-[93vh] dark:text-white ">
 
-            <div className="md:flex  h-full">
+            <div className="md:flex  ">
                 {/* Profile Image Section */}
-                <div className="md:flex-shrink-0 w-[65%]">
-                    <div className="relative w- h-60 md:h-full md:w-full">
+                <div className="md:flex-shrink-0 md:w-[65%] w-full">
+                    <div className="relative w-full h-60 md:h-[93vh] md:w-full">
                         <img
                             src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Update with your image path
                             alt="Profile Image"
@@ -21,20 +22,20 @@ const Page = () => {
                 </div>
 
                 {/* Profile Info Section */}
-                <div className="px-20 py-20 w-full ">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                <div className="md:px-20 md:py-20 px-6 py-6 w-full ">
+                    <h2 className="text-3xl font-bold text-center md:text-left text-gray-900 dark:text-white mb-2">
                         Sofi Salman
                     </h2>
-                    <p className="text-lg font-semibold text-gray-500 ">
+                    <p className="text-lg font-semibold text-center md:text-left text-gray-500 ">
                         Software Developer from Kashmir
                     </p>
-                    <Link
-                        href="#"
-                        className="my-4 inline-block bg-black text-white py-2 px-4 rounded-lg"
+                    <Button
+                        
+                        className='my-4'
                     >
-                        Visit my company website
-                    </Link>
-                    <p className="text-gray-700 leading-relaxed text-justify">
+                        Visit my Portfolio website
+                    </Button>
+                    <p className="text-gray-700 dark:text-gray-500 leading-relaxed text-justify">
                         I am a web developer having expertise in Next.js, React, TypeScript, and Node.js. Over the years, I have developed a deep understanding of building scalable web applications and creating seamless user experiences. I am passionate about staying up-to-date with the latest industry trends and continuously improving my skills. In addition to my technical abilities, I enjoy collaborating with cross-functional teams to deliver high-quality projects. My goal is to leverage technology to solve real-world problems and make a positive impact.
                     </p>
 
@@ -42,8 +43,8 @@ const Page = () => {
                         <h2 className="text-lg mt-6 font-semibold text-gray-500 mb-1">
                             Education
                         </h2>
-                        <p className='text-gray-700 leading-relaxed text-justify'>Bachlors of Computer Applicaton </p>
-                        <p className='text-gray-700 leading-relaxed text-justify'> University of kashmir</p>
+                        <p className='text-gray-700 dark:text-gray-500 leading-relaxed text-justify'>Bachlours of Computer Applicaton </p>
+                        <p className='text-gray-700 dark:text-gray-500 leading-relaxed text-justify'> University of kashmir</p>
                     </div>
 
 
@@ -54,16 +55,16 @@ const Page = () => {
 
 
                     <div className="mt-6 flex space-x-4">
-                        <Link href="#" className="text-gray-500 hover:text-black">
+                        <Link href="#" className="text-gray-500 hover:text-black dark:hover:text-white">
                             <LinkedinIcon />
                         </Link>
-                        <Link href="#" className="text-gray-500 hover:text-black">
+                        <Link href="#" className="text-gray-500 hover:text-black dark:hover:text-white">
                             <InstagramIcon />
                         </Link>
-                        <Link href="#" className="text-gray-500 hover:text-black">
+                        <Link href="#" className="text-gray-500 hover:text-black dark:hover:text-white">
                             <TwitterIcon />
                         </Link>
-                        <Link href="#" className="text-gray-500 text-2xl hover:text-black">
+                        <Link href="#" className="text-gray-500 text-2xl hover:text-black dark:hover:text-white">
                             <EnvelopeOpenIcon />
                         </Link>
                     </div>
