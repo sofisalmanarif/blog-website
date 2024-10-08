@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white mt-10 dark:text-white dark:bg-gray-900"  aria-labelledby="footer-heading">
+    <footer className="bg-white pt-10 dark:text-white dark:bg-gray-900"  aria-labelledby="footer-heading">
     <h2 id="footer-heading" className="sr-only">
       Footer
     </h2>

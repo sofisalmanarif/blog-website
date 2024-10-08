@@ -6,7 +6,7 @@ import React from 'react'
 
 const Page = () => {
     return (
-        <div className="w-full min-h-[93vh] dark:text-white ">
+        <div className="w-full min-h-[93vh]  dark:text-white ">
 
             <div className="md:flex  ">
                 {/* Profile Image Section */}

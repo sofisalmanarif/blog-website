@@ -17,7 +17,7 @@ const Card: React.FC<{ blog: BlogType }> = ({blog}) => {
 
 
         
-        <div className="relative flex  flex-col mt-6 dark:bg-gray-900 text-gray-700 hover:shadow-xl ease-in-out duration-300  dark:text-white shadow-md bg-clip-border rounded-xl w-92 md:w-[28rem]">
+        <div className="relative flex  h-96 flex-col mt-6 dark:bg-gray-900 text-gray-700 hover:shadow-xl ease-in-out duration-300  dark:text-white shadow-md bg-clip-border rounded-xl w-92 md:w-[28rem]">
             <div className="relative  flex justify-center mt-4 overflow-hidden text-gray-700  dark:text-white bg-clip-border rounded-xl h-80">
                 <img
                     src={blog.image}
