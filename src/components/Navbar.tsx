@@ -1,9 +1,11 @@
+'use client'
 import React from 'react'
 import { Button } from './ui/button'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { SheetDemo } from './Mysheet'
 import { ModeToggle } from './ToggleMode'
+import { signIn } from 'next-auth/react'
 
 const Navbar = () => {
     return (
@@ -16,7 +18,7 @@ const Navbar = () => {
                     <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/blog"}>Blogs</Link>
                     <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/contact-us"}>Contact Us</Link></div>
                     <ModeToggle/>
-                <Button>Login</Button>
+                <Button onClick={()=>signIn()}>Login</Button>
                 <Button>Join Us</Button>
             </div>
             <div className='md:hidden'>
