@@ -7,12 +7,15 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 import Typed from 'typed.js';
+import { useSession } from "next-auth/react"
 
 
 
 export default function Home() {
   const [isAnnual, setIsAnnual] = useState(true);
   const el = React.useRef(null);
+const data = useSession()
+console.log("session",data)
  
   React.useEffect(() => {
     const typed = new Typed(el.current, {
