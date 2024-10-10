@@ -1,13 +1,8 @@
 'use client'
-import { SheetDemo } from "@/components/Mysheet";
-import Navbar from "@/components/Navbar";
-import { Button } from "@/components/ui/button";
-import { ButtonIcon } from "@radix-ui/react-icons";
-import { Menu } from "lucide-react";
-import Image from "next/image";
 import React, { useState } from "react";
 import Typed from 'typed.js';
 import { useSession } from "next-auth/react"
+import Image from "next/image";
 
 
 
@@ -43,7 +38,9 @@ console.log("session",data)
         
       </div>
       <div className="w-full mt-4 lg:mt-0 lg:w-1/2">
-        <img
+        <Image
+        width={512}
+        height={400}
           src="https://www.creative-tim.com/twcomponents/svg/website-designer-bro-purple.svg"
           alt="tailwind css components"
           className="w-full h-full max-w-md mx-auto"
