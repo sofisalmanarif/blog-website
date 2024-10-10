@@ -55,7 +55,7 @@ const Page = () => {
 
 
                     <div className="mt-6 flex space-x-4">
-                        <Link href="" className="text-gray-500 hover:text-black dark:hover:text-white">
+                        <Link href="https://www.linkedin.com/in/sofi-salman-73a0b8249/" className="text-gray-500 hover:text-black dark:hover:text-white">
                             <LinkedinIcon />
                         </Link>
                         <Link href="#" className="text-gray-500 hover:text-black dark:hover:text-white">

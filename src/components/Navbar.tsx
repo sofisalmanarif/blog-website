@@ -12,7 +12,7 @@ const Navbar = () => {
     console.log(session?.data?.user)
     return (
         <div className=' sticky top-0 flex items-center z-10 justify-between md:px-20 px-5 py-4 border-b backdrop-blur'>
-            <Link href={"/"} className="logo text-xl font-semibold"> Salman Blogs</Link>
+            <Link href={"/"} className="logo text-xl font-semibold">TechThreads </Link>
             <div className='md:flex md:gap-4 md:items-center hidden'>
                 <div className='flex gap-4 mx-8'>
                     <Link className='hover:font-semibold hover:scale-105 ease-in-out duration-300' href={"/"}>Home</Link>
