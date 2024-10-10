@@ -18,11 +18,12 @@ const Card: React.FC<{ blog: BlogType }> = ({blog}) => {
 
 
         
-        <div className="relative flex  h-96 flex-col mt-6 dark:bg-gray-900 text-gray-700 hover:shadow-xl ease-in-out duration-300  dark:text-white shadow-md bg-clip-border rounded-xl w-92 md:w-[28rem]">
+        <div className="relative flex  h-96 flex-col mt-6 dark:bg-gray-900 text-gray-700 hover:shadow-xl ease-in-out duration-300  dark:text-white shadow-md bg-clip-border rounded-xl w-[380px] md:w-[28rem]">
             <div className="relative  flex justify-center mt-4 overflow-hidden text-gray-700  dark:text-white bg-clip-border rounded-xl h-80">
                 <Image
                     src={blog.image|| ""}
-                    alt="card-image" width={400} height={150}  className="object-cover  rounded-xl " />
+                    alt={blog.title || ''}
+                     width={390} height={550}   className="object-cover rounded-xl  md:max-w-[380px] w-[320px]" />
             </div>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
