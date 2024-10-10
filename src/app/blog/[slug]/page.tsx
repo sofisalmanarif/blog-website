@@ -2,6 +2,7 @@ import { transformerCopyButton } from '@rehype-pretty/transformers'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { notFound } from 'next/navigation'
+import path from 'path'
 import rehypeDocument from 'rehype-document'
 import rehypeFormat from 'rehype-format'
 import rehypePrettyCode from 'rehype-pretty-code'
@@ -14,7 +15,7 @@ import {unified} from 'unified'
 
 
 export default async function  Page({ params }: { params: { slug: string } }) {
-    const filepath =  `src/content/${params.slug}.md`
+    const filepath = path.join(process.cwd(),`src/content/${params.slug}.md`) 
 
     if(!fs.existsSync(filepath)){
       console.log("file not found",filepath)
