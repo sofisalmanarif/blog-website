@@ -27,9 +27,9 @@ export function SheetDemo({children}:PropType) {
         <SheetTitle><h1 className="md:text-xl md:font-bold">SalmanBlog</h1></SheetTitle>
      <div className='flex flex-col justify-center h-[80vh] space-x-4 my-8'>
      <Link className='hover:font-semibold ease-in-out duration-600' href={"/"}>Home</Link>
-                    <Link className='md:text-4xl hover:font-semibold ease-in-out duration-600' href={"/"}> About</Link>
-                    <Link className='hover:font-semibold ease-in-out duration-600' href={"/"}>Blogs</Link>
-                    <Link className='hover:font-semibold ease-in-out duration-600' href={"/"}>Contact Us</Link>
+                    <Link className='md:text-4xl hover:font-semibold ease-in-out duration-600' href={"/about"}> About</Link>
+                    <Link className='hover:font-semibold ease-in-out duration-600' href={"/blog"}>Blogs</Link>
+                    <Link className='hover:font-semibold ease-in-out duration-600' href={"/contact-us"}>Contact Us</Link>
                    
                     </div>
                

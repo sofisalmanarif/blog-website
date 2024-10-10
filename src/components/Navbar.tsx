@@ -28,6 +28,7 @@ const Navbar = () => {
                 
             </div>
             <div className='md:hidden'>
+            <ModeToggle/>
                 <SheetDemo> <Menu className='md:hidden' /></SheetDemo></div>
         </div>
     )

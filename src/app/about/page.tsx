@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons'
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -12,11 +13,14 @@ const Page = () => {
                 {/* Profile Image Section */}
                 <div className="md:flex-shrink-0 md:w-[65%] w-full">
                     <div className="relative w-full h-60 md:h-[93vh] md:w-full">
-                        <img
-                            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Update with your image path
+                        <Image
+                        width={768}
+                        height={240}
+                         layout='respond'
+                            src={"/me.jpeg"}
                             alt="Profile Image"
 
-                            className="object-cover w-full h-full"
+                            className="object-contain  w-full h-full"
                         />
                     </div>
                 </div>

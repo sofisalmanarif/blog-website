@@ -1,6 +1,6 @@
 ---
 title: 'Getting Started with Python'
-image: 'https://images.pexels.com/photos/11035474/pexels-photo-11035474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+image: '/python.webp'
 description: 'An introductory guide to programming with Python.'
 content: 'Python is a versatile and popular programming language known for its simplicity and readability...'
 slug: 'python-tutorial'

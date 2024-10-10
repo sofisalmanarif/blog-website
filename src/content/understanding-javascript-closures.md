@@ -1,6 +1,6 @@
 ---
 title: 'Understanding JavaScript Closures'
-image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg'
+image: '/closures.webp'
 description: 'A comprehensive guide to understanding JavaScript closures.'
 content: 'JavaScript closures are a fundamental concept that every JavaScript developer should understand...'
 slug: 'understanding-javascript-closures'

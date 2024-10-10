@@ -1,6 +1,6 @@
 ---
 title: 'Building RESTful APIs with Node.js'
-image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+image: '/nodejs.webp'
 description: 'A comprehensive guide to building RESTful APIs using Node.js.'
 content: 'Node.js is a powerful platform for building scalable and efficient web applications...'
 slug: 'building-restful-apis-with-nodejs'
