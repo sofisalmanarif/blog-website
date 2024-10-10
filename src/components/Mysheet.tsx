@@ -11,12 +11,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { signIn, signOut, useSession } from "next-auth/react"
 import  Link from "next/link"
 
 interface PropType{
     children:React.ReactNode
 }
 export function SheetDemo({children}:PropType) {
+  const session = useSession()
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -24,12 +26,14 @@ export function SheetDemo({children}:PropType) {
       </SheetTrigger>
       <SheetContent>
      <SheetHeader>
-        <SheetTitle><h1 className="md:text-xl md:font-bold">SalmanBlog</h1></SheetTitle>
-     <div className='flex flex-col justify-center h-[80vh] space-x-4 my-8'>
-     <Link className='hover:font-semibold ease-in-out duration-600' href={"/"}>Home</Link>
-                    <Link className='md:text-4xl hover:font-semibold ease-in-out duration-600' href={"/about"}> About</Link>
-                    <Link className='hover:font-semibold ease-in-out duration-600' href={"/blog"}>Blogs</Link>
-                    <Link className='hover:font-semibold ease-in-out duration-600' href={"/contact-us"}>Contact Us</Link>
+        <SheetTitle>
+          
+      <h1 className="md:text-xl md:font-bold">TechThreads</h1></SheetTitle>
+     <div className='flex flex-col py-20 h-[80vh] space-y-6 my-8'>
+     <Link className='hover:font-semibold text-4xl ease-in-out duration-600' href={"/"}>Home</Link>
+                    <Link className='text-4xl hover:font-semibold ease-in-out duration-600' href={"/about"}> About</Link>
+                    <Link className=' text-4xl hover:font-semibold ease-in-out duration-600' href={"/blog"}>Blogs</Link>
+                    <Link className='text-4xl hover:font-semibold ease-in-out duration-600' href={"/contact-us"}>Contact Us</Link>
                    
                     </div>
                
@@ -40,8 +44,10 @@ export function SheetDemo({children}:PropType) {
         <SheetFooter>
           <SheetClose asChild>
            <div className="flex items-center justify-center w-full gap-2">
-           <Button>Login</Button>
-           <Button>Join Us</Button>
+           {
+                        !session?.data?.user ? <Button onClick={() => signIn()}>Login</Button>:
+                        <Button variant={'destructive'} onClick={()=>signOut()}> Log Out</Button>
+                    }
            </div>
           </SheetClose>
         </SheetFooter>
