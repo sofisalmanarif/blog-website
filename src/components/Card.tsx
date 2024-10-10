@@ -23,7 +23,7 @@ const Card: React.FC<{ blog: BlogType }> = ({blog}) => {
                 <Image
                     src={blog.image|| ""}
                     alt={blog.title || ''}
-                     width={390} height={550}   className="object-cover rounded-xl  md:max-w-[380px] w-[320px]" />
+                     width={390} height={550}   className="object-cover rounded-xl  md:w-[390px] w-[330px]" />
             </div>
             <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
