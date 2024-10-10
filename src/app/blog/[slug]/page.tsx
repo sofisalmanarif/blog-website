@@ -17,6 +17,7 @@ export default async function  Page({ params }: { params: { slug: string } }) {
     const filepath =  `src/content/${params.slug}.md`
 
     if(!fs.existsSync(filepath)){
+      console.log("file not found",filepath)
       notFound()
       return
     }
