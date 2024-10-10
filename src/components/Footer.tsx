@@ -13,11 +13,11 @@ const Footer = () => {
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
             <div className="mt-6 lg:mb-0 mb-6 flex ">
-              <Link href={"https://www.linkedin.com/in/sofi-salman-73a0b8249/"} className=" text-blue-400 shadow-lg flex font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2">
+              <Link href={"https://www.linkedin.com/in/sofi-salman-73a0b8249/"} className=" text-blue-400 dark:bg-gray-700 shadow-lg flex font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2">
               <LinkedinIcon/></Link>
-              <span className="bg-white text-red-600 flex  shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" >
+              <span className="bg-white text-red-600 flex dark:bg-gray-700 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" >
               <InstagramIcon/></span>
-              <span className="bg-white text-              black shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" >
+              <span className="bg-white text-black dark:bg-gray-700 dark:text-white shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" >
                 <TwitterIcon/></span>
                
             </div>
