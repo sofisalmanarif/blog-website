@@ -18,7 +18,7 @@ const Navbar = () => {
                     <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/blog"}>Blogs</Link>
                     <Link className='hover:font-semibold  hover:scale-105 ease-in-out duration-300' href={"/contact-us"}>Contact Us</Link></div>
                     <ModeToggle/>
-                <Button onClick={()=>signIn()}>Login</Button>
+                <Button onClick={async()=>await signIn("github")}>Login</Button>
                 <Button>Join Us</Button>
             </div>
             <div className='md:hidden'>
