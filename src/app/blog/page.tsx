@@ -27,7 +27,7 @@ const page = () => {
   // console.log(blogs)
 
   return (
-    <div className='container  min-h-screen px-4 mx-auto grid md:grid-cols-3 grid-cols-1'>
+    <div className='container  min-h-screen px-4 justify-items-center mx-auto grid md:grid-cols-3 grid-cols-1'>
       {blogs.map((blog:BlogType, index) => (
         <Card key={index} blog={blog} />
       ))}
