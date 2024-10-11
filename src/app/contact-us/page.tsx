@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -8,7 +9,8 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const Page = () => {
-    const handleSubmitForm = async (formData: FormData) => {
+    
+    const handleSubmitForm = async (formData: FormData): Promise<any> => {
         'use server'
         // Extract form data directly from the FormData object
         const email = formData.get('email')?.toString() || '';
@@ -19,25 +21,33 @@ const Page = () => {
 
         // You can perform further actions like sending the data to a backend, etc.
         try {
-           
-        
-            const { data, error } = await resend.emails.send({
-              from: 'Acme <onboarding@resend.dev>',
-              to: 'sofisalman9906@gmail.com',
-              subject: "subject",
-              react: EmailTemplate({ email, subject, message }),
-            });
-        
-            if (error) {
-              return Response.json({ error }, { status: 500 });
-            }
-        
-            return 
-          } catch (error) {
-            return Response.json({ error }, { status: 500 });
-          }
-    }
 
+
+            const { data, error } = await resend.emails.send({
+                from: 'Acme <onboarding@resend.dev>',
+                to: 'sofisalman9906@gmail.com',
+                subject: subject,
+                react: EmailTemplate({ email, subject, message }),
+            });
+
+            if (error) {
+                return Response.json({ error }, { status: 500 });
+            }
+            console.log("data", data)
+            return Response.json({ success: true, message: "message Sent" }, { status: 200 });
+        } catch (error) {
+            return Response.json({ error }, { status: 500 });
+        }
+    }
+    const submit = async (formdata: FormData) => {
+        'use server'
+        const res = await handleSubmitForm(formdata)
+        if (res?.status === 200) {
+            console.log("res", res)
+            //    alert("hay")
+
+        }
+    }
 
     return (
         <section className="bg-white min-h-svh dark:bg-black">
@@ -49,7 +59,7 @@ const Page = () => {
 
 
 
-                <form action={handleSubmitForm} className="space-y-8">
+                <form action={submit} className="space-y-8">
                     <div>
                         <Label htmlFor="email">Your Email</Label>
                         <Input placeholder="name@flowbite.com" name='email' type='email' required />
@@ -57,7 +67,7 @@ const Page = () => {
                     <div>
                         <Label htmlFor="email">Subject</Label>
 
-                        <Input className='' name='subject'  placeholder="Let us know how we can help you" required />
+                        <Input className='' name='subject' placeholder="Let us know how we can help you" required />
 
                     </div>
                     <div className="sm:col-span-2">
