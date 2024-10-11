@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -8,9 +7,15 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+type APIResponse = {
+    success: boolean;
+    message: string;
+    data?: object;
+    error?: string;
+  };
+
 const Page = () => {
-    
-    const handleSubmitForm = async (formData: FormData): Promise<any> => {
+    const handleSubmitForm = async (formData: FormData):Promise<APIResponse> => {
         'use server'
         // Extract form data directly from the FormData object
         const email = formData.get('email')?.toString() || '';
@@ -21,33 +26,33 @@ const Page = () => {
 
         // You can perform further actions like sending the data to a backend, etc.
         try {
-
-
+           
+        
             const { data, error } = await resend.emails.send({
-                from: 'Acme <onboarding@resend.dev>',
-                to: 'sofisalman9906@gmail.com',
-                subject: subject,
-                react: EmailTemplate({ email, subject, message }),
+              from: 'Acme <onboarding@resend.dev>',
+              to: 'sofisalman9906@gmail.com',
+              subject: subject,
+              react: EmailTemplate({ email, subject, message }),
             });
-
+        
             if (error) {
-                return Response.json({ error }, { status: 500 });
-            }
-            console.log("data", data)
-            return Response.json({ success: true, message: "message Sent" }, { status: 200 });
-        } catch (error) {
-            return Response.json({ error }, { status: 500 });
-        }
-    }
-    const submit = async (formdata: FormData) => {
-        'use server'
-        const res = await handleSubmitForm(formdata)
-        if (res?.status === 200) {
-            console.log("res", res)
-            //    alert("hay")
+                return { success: false, message: error.message || "Failed to send email.", error: error.message };
 
-        }
+            }
+        console.log("data",data)
+            return { success: true, message: "Your message has been sent successfully!" };
+          } catch (error) {
+            return { success: false, message: "An unexpected error occurred.", };
+          }
     }
+const submit =async (formdata:FormData)=>{
+    'use server'
+   const res =  await handleSubmitForm(formdata)
+   if(res?.success){
+       console.log("res",res)
+
+   }
+}
 
     return (
         <section className="bg-white min-h-svh dark:bg-black">
@@ -67,7 +72,7 @@ const Page = () => {
                     <div>
                         <Label htmlFor="email">Subject</Label>
 
-                        <Input className='' name='subject' placeholder="Let us know how we can help you" required />
+                        <Input className='' name='subject'  placeholder="Let us know how we can help you" required />
 
                     </div>
                     <div className="sm:col-span-2">
