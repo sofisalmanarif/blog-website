@@ -41,8 +41,11 @@ const Page = () => {
             }
         console.log("data",data)
             return { success: true, message: "Your message has been sent successfully!" };
-          } catch (error) {
-            return { success: false, message: "An unexpected error occurred.", };
+          } catch (error : unknown) {
+            if (error instanceof Error) {
+                return { success: false, message: "An unexpected error occurred.", error: error.message };
+              }
+              return { success: false, message: "An unexpected error occurred.", error: "Unknown error" };
           }
     }
 const submit =async (formdata:FormData)=>{
