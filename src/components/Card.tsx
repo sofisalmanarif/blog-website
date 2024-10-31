@@ -38,7 +38,7 @@ const Card: React.FC<{ blog: BlogType }> = ({blog}) => {
             </div>
             <div className="p-6 pt-0">
                
-                <Link href={`/blog/${blog.slug}`} className={buttonVariants({ variant: "outline" })}>Click here</Link>
+                <Link href={`/blog/${blog.slug}`} className={buttonVariants({ variant: "outline" })}>View More</Link>
 
             </div>
         </div>
