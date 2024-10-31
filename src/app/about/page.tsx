@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button'
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons'
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
 import Image from 'next/image'
@@ -36,7 +37,7 @@ const Page = () => {
                         
                         className='my-4'
                     >
-                        Visit my Portfolio website
+                       <Button className='my-4'> Visit my Portfolio website</Button>
                     </Link>
                     <p className="text-gray-700 dark:text-gray-500 leading-relaxed text-justify">
                         I am a web developer having expertise in Next.js, React, TypeScript, and Node.js. Over the years, I have developed a deep understanding of building scalable web applications and creating seamless user experiences. I am passionate about staying up-to-date with the latest industry trends and continuously improving my skills. In addition to my technical abilities, I enjoy collaborating with cross-functional teams to deliver high-quality projects. My goal is to leverage technology to solve real-world problems and make a positive impact.
