@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button'
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons'
 import { InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react'
 import Image from 'next/image'
