@@ -5,12 +5,7 @@ import path from 'path';
 import React from 'react'
 
 
-
-
-
-
-const page = () => {
-  const contentDirectory = path.join(process.cwd(), '/src/content');
+const contentDirectory = path.join(process.cwd(), '/src/content');
   console.log(contentDirectory)
   const filenames = fs.readdirSync(contentDirectory, 'utf-8');
   
@@ -25,6 +20,11 @@ const page = () => {
        return data
   })
   // console.log(blogs)
+
+
+
+const page = () => {
+  
 
   return (
     <div className='container  min-h-screen px-4 justify-items-center mx-auto grid md:grid-cols-3 grid-cols-1'>
