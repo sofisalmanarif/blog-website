@@ -6,6 +6,7 @@ import { EmailTemplate } from '../../components/email-template';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+console.log(process.env.RESEND_API_KEY)
 
 type APIResponse = {
     success: boolean;
@@ -22,7 +23,7 @@ const Page = () => {
         const subject = formData.get('subject')?.toString() || '';
         const message = formData.get('message')?.toString() || '';
 
-        console.log("Form submitted with data:", { email, subject, message });
+        // console.log("Form submitted with data:", { email, subject, message });
 
         // You can perform further actions like sending the data to a backend, etc.
         try {
