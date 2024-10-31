@@ -1,14 +1,12 @@
 'use client'
-import React, { useState } from "react";
+import React from "react";
 import Typed from 'typed.js';
 import { useSession } from "next-auth/react"
 import Image from "next/image";
-import Recentposts from "@/components/Recentposts";
 
 
 
 export default function Home() {
-  const [isAnnual, setIsAnnual] = useState(true);
   const el = React.useRef(null);
 const data = useSession()
 console.log("session",data)
